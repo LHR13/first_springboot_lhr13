@@ -6,15 +6,17 @@ import javax.persistence.*;
 public class Music {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer id;
 
-    @Column(name = "mname", nullable = false)
+    @Column
     private  String mname;
-    private String author;
-    private Float price;
 
-    @Transient
-    private String description;
+    @Column
+    private String author;
+
+    @Column
+    private Float price;
 
     public Music() {
     }
@@ -51,19 +53,10 @@ public class Music {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Music(Integer id, String mname, String author, Float price, String description) {
+    public Music(Integer id, String mname, String author, Float price) {
         this.id = id;
         this.mname = mname;
         this.author = author;
         this.price = price;
-        this.description = description;
     }
 }
