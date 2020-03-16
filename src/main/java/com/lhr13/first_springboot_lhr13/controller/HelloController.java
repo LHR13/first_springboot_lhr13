@@ -11,9 +11,7 @@ import java.util.Map;
 public class HelloController {
     @GetMapping("/hello")
     @ResponseBody
-    public String hello( Model model) {
-        Map<String, Object> map = model.asMap();
-        System.out.println(map.toString());
-        return "123" + map.toString();
+    public String hello() {
+        return "Hello";
     }
 }

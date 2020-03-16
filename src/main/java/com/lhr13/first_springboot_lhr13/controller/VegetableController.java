@@ -2,7 +2,6 @@ package com.lhr13.first_springboot_lhr13.controller;
 
 import com.lhr13.first_springboot_lhr13.bean.Vegetable;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
