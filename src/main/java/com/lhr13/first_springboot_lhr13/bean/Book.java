@@ -3,7 +3,9 @@ package com.lhr13.first_springboot_lhr13.bean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 
-public class Book {
+import java.io.Serializable;
+
+public class Book implements Serializable {
     private Integer id;
     private String name;
     private String author;
@@ -25,6 +27,8 @@ public class Book {
                 ", price=" + price +
                 '}';
     }
+
+    public Book() {}
 
     public Integer getId() {
         return id;
